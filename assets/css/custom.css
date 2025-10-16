@@ -76,6 +76,7 @@
 .greedy-nav .hidden-links {
   background: var(--global-bg-color) !important;
   border-color: var(--global-border-color) !important;
+  display: none; /* Initially hidden */
 }
 [data-theme='dark'] .greedy-nav .hidden-links {
   background: var(--global-card-bg) !important;

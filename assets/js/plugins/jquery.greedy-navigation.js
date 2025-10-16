@@ -56,8 +56,7 @@ function updateNav() {
     if(breaks.length < 1) {
       $btn.addClass('hidden');
       $btn.removeClass('close');
-      $hlinks.addClass('hidden');
-      $hlinks.prop('hidden', true);
+      $hlinks.hide();
     }
   }
 
@@ -76,8 +75,7 @@ screen.orientation.addEventListener("change", function(){
 });
 
 $btn.on('click', function() {
-  $hlinks.toggleClass('hidden');
-  $hlinks.prop('hidden', !$hlinks.prop('hidden'));
+  $hlinks.fadeToggle("fast", function() {});
   $(this).toggleClass('close');
 });
 

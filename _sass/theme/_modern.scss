@@ -22,9 +22,9 @@ $success-color              : #22c55e;  // green-500
 $warning-color              : #f59e0b;  // amber-500
 
 /* UI tokens */
-$border-radius              : 16px;
-$box-shadow                 : 0 8px 24px rgba(2, 6, 23, 0.06);
-$global-transition          : all 0.25s ease;
+$border-radius              : 8px;
+$box-shadow                 : 0 2px 8px rgba(2, 6, 23, 0.04);
+$global-transition          : all 0.18s ease;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
 $navicon-height             : 4px;
@@ -129,14 +129,12 @@ p { line-height: 1.7; }
   background: var(--global-card-bg);
   border: 1px solid var(--global-border-color);
   border-radius: $border-radius;
-  box-shadow: $box-shadow;
-  transition: transform 160ms cubic-bezier(.2,.8,.2,1), box-shadow 160ms cubic-bezier(.2,.8,.2,1);
+  box-shadow: none;
 }
-.card:hover { transform: translateY(-2px); }
 
 /* Links */
 a { color: var(--global-link-color); text-decoration: none; }
-a:hover { color: var(--global-link-color-hover); }
+a:hover { color: var(--global-link-color-hover); text-decoration: underline; }
 
 /* Focus styles */
 :where(a, button, input, textarea, select):focus-visible {

@@ -15,15 +15,7 @@
   }
 
   a {
-    text-decoration: underline;
-
-    &:hover {
-      text-decoration: underline;
-
-      img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
-      }
-    }
+    text-decoration: none;
   }
 }
 
@@ -66,23 +58,9 @@
   }
 }
 
-.archive__item-teaser {
-  border-radius: $border-radius;
-  overflow: hidden;
-  img {
-    width: 100%;
-  }
-}
+.archive__item-teaser { border-radius: 0; overflow: hidden; img { width: 100%; } }
 
-.archive__item:hover {
-  .archive__item-teaser {
-    box-shadow: 0 0 10px rgba(#000, 0.25);
-  }
-
-  .archive__item-title {
-    text-decoration: underline;
-  }
-}
+.archive__item:hover { .archive__item-teaser { box-shadow: none; } .archive__item-title { text-decoration: underline; } }
 
 
 /*
@@ -142,18 +120,9 @@
     margin-right: 0; /* reset before mixin does its thing*/
     @include gallery(2.5 of 10);
 
-    .archive__item-teaser {
-      max-height: 160px;
-      border-radius: $border-radius;
-      overflow: hidden;
-      box-shadow: $box-shadow;
-    }
+    .archive__item-teaser { max-height: 160px; border-radius: 0; overflow: hidden; box-shadow: none; }
 
-    .archive__item-excerpt {
-      display: block;
-      font-size: $type-size-6;
-      color: var(--global-text-color-light);
-    }
+    .archive__item-excerpt { display: block; font-size: $type-size-6; color: var(--global-text-color-light); }
   }
 }
 

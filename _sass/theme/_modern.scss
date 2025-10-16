@@ -10,9 +10,9 @@ $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
 /* Accent palette */
-$primary                    : #6366f1;  // indigo-500
-$primary-dark               : mix(#000, $primary, 20%);
-$primary-light              : mix(#fff, $primary, 15%);
+$primary                    : #111111;  // neutral link/button tone
+$primary-dark               : #000000;
+$primary-light              : #2a2a2a;
 
 /* Semantic */
 $danger-color               : #ef4444;  // red-500
@@ -22,8 +22,8 @@ $success-color              : #22c55e;  // green-500
 $warning-color              : #f59e0b;  // amber-500
 
 /* UI tokens */
-$border-radius              : 10px;
-$box-shadow                 : 0 10px 30px rgba(2, 6, 23, 0.08);
+$border-radius              : 16px;
+$box-shadow                 : 0 8px 24px rgba(2, 6, 23, 0.06);
 $global-transition          : all 0.25s ease;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
@@ -40,11 +40,11 @@ $sidebar-screen-min-width   : 1024px;
   --global-code-background-color: #f3f4f6; /* gray-100 */
   --global-code-text-color: #111827; /* gray-900 */
   --global-fig-caption-color: #6b7280;
-  --global-link-color: #{$primary};
-  --global-link-color-hover: #{$primary-dark};
-  --global-link-color-visited: #{$primary-light};
+  --global-link-color: #111111;
+  --global-link-color-hover: #000000;
+  --global-link-color-visited: #222222;
   --global-masthead-link-color: #0f172a; /* slate-900 */
-  --global-masthead-link-color-hover: #334155; /* slate-700 */
+  --global-masthead-link-color-hover: #111111; /* darker neutral */
   --global-text-color: #0f172a; /* slate-900 */
   --global-text-color-light: #475569; /* slate-600 */
   --global-thead-color: #f1f5f9; /* slate-100 */
@@ -53,20 +53,20 @@ $sidebar-screen-min-width   : 1024px;
 /* Dark theme overrides */
 [data-theme="dark"] {
   --global-base-color: #a1a1aa; /* zinc-400 */
-  --global-bg-color: #0b1220; /* slate-950 */
-  --global-card-bg: #0f172a; /* slate-900 */
-  --global-border-color: #1f2937; /* gray-800 */
-  --global-code-background-color: #111827; /* gray-900 */
-  --global-code-text-color: #e5e7eb; /* gray-200 */
-  --global-fig-caption-color: #94a3b8; /* slate-400 */
-  --global-link-color: #{$primary-light};
-  --global-link-color-hover: #{$primary};
-  --global-link-color-visited: #{$primary};
-  --global-masthead-link-color: #e5e7eb;
-  --global-masthead-link-color-hover: #cbd5e1;
-  --global-text-color: #e5e7eb;
-  --global-text-color-light: #94a3b8;
-  --global-thead-color: #0b1220;
+  --global-bg-color: #0b0b0b; /* deep neutral */
+  --global-card-bg: #0f0f0f; /* near-black */
+  --global-border-color: #262626; /* neutral-800 */
+  --global-code-background-color: #111111; /* neutral-900 */
+  --global-code-text-color: #e5e5e5; /* neutral-200 */
+  --global-fig-caption-color: #a3a3a3; /* neutral-400 */
+  --global-link-color: #e5e5e5;
+  --global-link-color-hover: #ffffff;
+  --global-link-color-visited: #d4d4d4;
+  --global-masthead-link-color: #e5e5e5;
+  --global-masthead-link-color-hover: #ffffff;
+  --global-text-color: #e5e5e5;
+  --global-text-color-light: #a3a3a3;
+  --global-thead-color: #0b0b0b;
 }
 
 /* Subtle card styling hook (consumed by layout partials via vars) */
@@ -93,16 +93,18 @@ html {
   --step-2: clamp(1.44rem, calc(1.34rem + 0.52vw), 1.76rem);
   --step-3: clamp(1.73rem, calc(1.58rem + 0.86vw), 2.20rem);
   --step-4: clamp(2.07rem, calc(1.85rem + 1.36vw), 2.75rem);
+  --masthead-h: 70px;
 }
 
 body {
   font-size: var(--step-0);
   color: var(--global-text-color);
   background: var(--global-bg-color);
+  padding-top: var(--masthead-h);
 }
 
-h1 { font-size: var(--step-4); line-height: 1.1; letter-spacing: -0.01em; }
-h2 { font-size: var(--step-3); line-height: 1.15; letter-spacing: -0.01em; }
+h1 { font-size: var(--step-4); line-height: 1.1; letter-spacing: 0.01em; margin: 0 0 0.75em; }
+h2 { font-size: var(--step-3); line-height: 1.15; letter-spacing: 0.005em; margin: 1.25em 0 0.5em; }
 h3 { font-size: var(--step-2); line-height: 1.2; }
 h4 { font-size: var(--step-1); }
 p { line-height: 1.7; }
@@ -158,4 +160,23 @@ input, textarea, select {
 table { border-collapse: collapse; width: 100%; }
 thead { background: var(--global-thead-color); }
 th, td { padding: .75rem 1rem; border-bottom: 1px solid var(--global-border-color); }
+
+/* Fixed masthead */
+.masthead {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Two-column layout override for pages with sidebar */
+@media (min-width: 1024px) {
+  #main.container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  #main .sidebar { position: sticky; top: calc(var(--masthead-h) + 16px); }
+}
 

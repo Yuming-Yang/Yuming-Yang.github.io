@@ -235,11 +235,11 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: false
-      read_time: false
+      author_profile: true
+      read_time: true
       comments: false
-      share: false
-      related: false
+      share: true
+      related: true
   # _pages
   - scope:
       path: ""

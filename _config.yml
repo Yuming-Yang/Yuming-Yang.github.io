@@ -19,8 +19,8 @@ repository               : "Yuming-Yang/Yuming-Yang.github.io"
 
 # External platforms and feeds (fill in your real URLs)
 platforms:
-  substack_url           : # e.g., https://yourname.substack.com
-  medium_url             : # e.g., https://medium.com/@yourname
+  substack_url           : https://alanyang0.substack.com
+  medium_url             : https://medium.com/@alanyang0
   twitter_url            : https://twitter.com/Alanyang00
   linkedin_url           : https://linkedin.com/in/yumingyang0
   github_url             : https://github.com/Yuming-Yang
@@ -29,7 +29,7 @@ platforms:
   google_podcasts_url    : # e.g., https://podcasts.google.com/feed/...
 
 external_feeds:
-  blog_rss               : # e.g., https://yourname.substack.com/feed
+  blog_rss               : https://alanyang0.substack.com/feed
   podcast_rss            : # e.g., https://your-podcast-feed-url.xml
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -40,9 +40,9 @@ author:
   avatar           : "avatar.PNG"
   name             : "Yuming Yang"
   pronouns         : # example: "she/her"  
-  bio              : "MS Financial Economics at Columbia Business School 26' | PKU Mathematics & Economics 24' | Crypto, Macro, Credit, Quant"
-  location         : "New York"
-  employer         : "Columbia Business School"
+  bio              : "Columbia Business School | PKU Mathematics & Economics| Crypto, Macro, Quant"
+  location         : "Shanghai"
+  employer         : # "Columbia Business School"
   uri              : # URL
   email            : "YYang26@gsb.columbia.edu" 
 

@@ -30,7 +30,7 @@ I'm always open to discussing:
 
 ## Location
 
-Currently based in **New York City** while pursuing my MS in Financial Economics at Columbia Business School.
+Currently based in **Shanghai**.
 
 ---
 

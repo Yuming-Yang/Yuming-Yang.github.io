@@ -14,7 +14,7 @@ With dual Bachelor's degrees in Mathematics and Economics from Peking University
 
 ## Current Focus
 
-- **Digital Assets**: Research and analysis of cryptocurrency markets and blockchain technology
+- **Crypto**: Research and analysis of cryptocurrency markets and blockchain technology
 - **Macro Economics**: Global economic trends and their implications for investment strategies  
 - **Quantitative Finance**: Systematic trading approaches and risk management frameworks
 - **Market Research**: Data-driven insights across traditional and alternative asset classes
@@ -22,13 +22,12 @@ With dual Bachelor's degrees in Mathematics and Economics from Peking University
 ## Content & Media
 
 I regularly share insights through:
-- **Blog posts** on market trends and quantitative analysis
+- **Blog posts** on market observations
 - **Podcast conversations** with industry experts and thought leaders
-- **Research publications** on topics in financial economics
 
 ## Education
 
-- **MS Financial Economics** - Columbia Business School (Expected 2026)
+- **MS Financial Economics** - Columbia Business School (Expected 2027)
 - **BS Mathematics & Economics** - Peking University (2024)
 
 ---

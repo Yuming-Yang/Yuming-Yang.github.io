@@ -8,8 +8,10 @@ main:
   - title: "Home"
     url: /
   - title: "Blog"
-    url: /year-archive/
+    url: /blog/
   - title: "Podcast"
     url: /podcast/
+  - title: "About"
+    url: /about/
   - title: "Connect"
     url: /connect/

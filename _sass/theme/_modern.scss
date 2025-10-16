@@ -173,12 +173,17 @@ th, td { padding: .75rem 1rem; border-bottom: 1px solid var(--global-border-colo
 @media (min-width: 1024px) {
   #main.container {
     display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 2rem;
+    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+    gap: clamp(1.25rem, 2vw, 2rem);
     align-items: start;
   }
   #main .sidebar { position: sticky; top: calc(var(--masthead-h) + 16px); float: none; width: auto; }
   #main.container > .sidebar { grid-column: 1; }
   #main.container > .page { grid-column: 2; min-width: 0; }
+}
+
+/* Stack on smaller viewports */
+@media (max-width: 1023.98px) {
+  #main.container { display: block; }
 }
 

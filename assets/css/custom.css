@@ -3,7 +3,7 @@
 [data-theme='dark'] { --yy-accent: #f5f5f5; }
 
 /* Buttons */
-.btn, button, a.btn { transition: color .16s cubic-bezier(.2,.8,.2,1), background-color .16s cubic-bezier(.2,.8,.2,1), box-shadow .16s cubic-bezier(.2,.8,.2,1), transform .12s ease; }
+.btn, button, a.btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; padding: .55rem .9rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; transition: color .16s cubic-bezier(.2,.8,.2,1), background-color .16s cubic-bezier(.2,.8,.2,1), box-shadow .16s cubic-bezier(.2,.8,.2,1), transform .12s ease; }
 .btn--primary { 
   background-color: rgba(17,17,17,.06);
   border-color: rgba(17,17,17,.15);
@@ -15,6 +15,11 @@
 .btn { color: var(--global-text-color); border-radius: var(--yy-radius); }
 [data-theme='dark'] .btn--primary { background-color: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #e5e5e5; }
 [data-theme='dark'] .btn--primary:hover { background-color: rgba(255,255,255,.12); border-color: rgba(255,255,255,.28); }
+
+/* Secondary button style (outline) */
+.btn--secondary { background: transparent; border-color: var(--global-border-color); color: var(--global-text-color); }
+.btn--secondary:hover { background: rgba(0,0,0,.04); }
+[data-theme='dark'] .btn--secondary:hover { background: rgba(255,255,255,.06); }
 .btn--primary:hover { filter: brightness(1.05); box-shadow: 0 6px 18px rgba(0,0,0,.15); transform: translateY(-1px); }
 
 /* Cards */

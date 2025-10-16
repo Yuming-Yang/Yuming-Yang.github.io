@@ -83,4 +83,51 @@ $(document).ready(function(){
     onScroll();
   }
 
+  // Mobile nav toggle (progressive enhancement)
+  var navToggle = document.querySelector('[data-nav-toggle]');
+  var nav = document.querySelector('[data-nav]');
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', function(){
+      nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', nav.classList.contains('is-open'));
+    });
+  }
+
+  // Theme toggle with persistence
+  var themeToggle = document.getElementById('theme-toggle');
+  var root = document.documentElement;
+  function setTheme(mode){
+    if (mode === 'dark') root.setAttribute('data-theme','dark');
+    else root.removeAttribute('data-theme');
+  }
+  try {
+    var stored = localStorage.getItem('yy-theme');
+    if (stored) setTheme(stored);
+  } catch(e) {}
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function(){
+      var isDark = root.getAttribute('data-theme') === 'dark';
+      var next = isDark ? 'light' : 'dark';
+      setTheme(next);
+      try { localStorage.setItem('yy-theme', next); } catch(e) {}
+    });
+  }
+
+  // Reveal on view (IntersectionObserver) with reduced motion guard
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+    document.querySelectorAll('.archive__item, .card').forEach(function(el){
+      el.classList.add('will-reveal');
+      io.observe(el);
+    });
+  }
+
 });

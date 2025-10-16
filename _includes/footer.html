@@ -1,6 +1,16 @@
 {% include base_path %}
 
 <div class="page__footer-custom">
-  <!-- Minimal footer, customized -->
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}
+  <div class="container">
+    <div class="stack">
+      <div class="cluster">
+        <span>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
+        {% if site.platforms.github_url %}<a href="{{ site.platforms.github_url }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+        {% if site.platforms.twitter_url %}<a href="{{ site.platforms.twitter_url }}" target="_blank" rel="noopener">Twitter/X</a>{% endif %}
+        {% if site.platforms.linkedin_url %}<a href="{{ site.platforms.linkedin_url }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+        {% if site.platforms.substack_url %}<a href="{{ site.platforms.substack_url }}" target="_blank" rel="noopener">Substack</a>{% endif %}
+      </div>
+      <p class="page__meta" style="margin:0; opacity:.75">Built with Jekyll. Theme modernized for clarity and accessibility.</p>
+    </div>
+  </div>
 </div>

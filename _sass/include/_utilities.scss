@@ -117,6 +117,23 @@ body:hover .visually-hidden button {
   @include container();
 }
 
+/* Layout utilities */
+.container { width: min(1100px, 92vw); margin-left: auto; margin-right: auto; }
+.stack > * + * { margin-top: 1rem; }
+.cluster { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
+.center { box-sizing: content-box; margin-left: auto; margin-right: auto; }
+
+/* Text utilities */
+.text-balance { text-wrap: balance; }
+
+/* Accessibility */
+.focus-ring:focus-visible { outline: 2px solid var(--global-link-color); outline-offset: 2px; border-radius: 8px; }
+
+/* Motion hooks */
+.will-reveal { opacity: 0; transform: translateY(6px); transition: opacity .3s ease, transform .3s ease; }
+.in-view { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .will-reveal { opacity: 1; transform: none; } }
+
 /* Source: http://snipplr.com/view/10979/css-cross-browser-word-wrap */
 .wordwrap { 
   white-space: pre-wrap;      /* CSS3 */   

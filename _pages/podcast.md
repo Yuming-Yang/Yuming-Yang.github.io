@@ -7,7 +7,7 @@ redirect_from:
   - /podcast.html
 ---
 
-<div class="cta-bar">
+<div class="cta-bar cluster">
   <strong>Listen on:</strong>
   {% if site.platforms.spotify_url %}<a class="btn btn--primary" href="{{ site.platforms.spotify_url }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
   {% if site.platforms.apple_podcasts_url %}<a class="btn" href="{{ site.platforms.apple_podcasts_url }}" target="_blank" rel="noopener">Apple Podcasts</a>{% endif %}

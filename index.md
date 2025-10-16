@@ -8,7 +8,6 @@ author_profile: true
 
 <div class="home-intro">
   <h2>Welcome</h2>
-  <p>{{ site.author.bio }}</p>
   <p>
     <a class="btn btn--primary" href="/blog/">Read the Blog</a>
     <a class="btn btn--primary" href="/podcast/">Listen to the Podcast</a>

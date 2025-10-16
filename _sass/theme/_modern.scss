@@ -70,10 +70,18 @@ $sidebar-screen-min-width   : 1024px;
 }
 
 /* Subtle card styling hook (consumed by layout partials via vars) */
-.page, .archive, .page__content, .sidebar, .page__hero, .site-footer {
-  background: var(--global-card-bg);
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
+/* Surface styling: keep cards elevated, let major columns blend with page */
+.page__hero, .site-footer {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Let primary columns be transparent to avoid obvious blocks on custom browser bg */
+.page, .archive, .page__content, .sidebar {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 

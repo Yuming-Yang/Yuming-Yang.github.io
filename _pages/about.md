@@ -6,11 +6,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a financial economics professional with a passion for understanding complex market dynamics and building systematic approaches to investment analysis. Currently pursuing my MS in Financial Economics at Columbia Business School, I focus on the intersection of traditional finance and emerging digital assets.
-
-## Background
-
-With dual Bachelor's degrees in Mathematics and Economics from Peking University, I bring a quantitative foundation to my analysis of markets, crypto assets, and macroeconomic trends. My work spans across macro investing, cryptocurrency research, credit analysis, and quantitative finance.
+I’m a finance professional with a strong quantitative foundation and a passion for understanding complex market dynamics. Currently pursuing my M.S. in Financial Economics at Columbia Business School and holding dual Bachelor’s degrees in Mathematics and Economics from Peking University, I focus on macro investing, cryptocurrency research and quantitative finance.
 
 ## Current Focus
 

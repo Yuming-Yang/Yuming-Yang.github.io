@@ -40,7 +40,7 @@ author:
   avatar           : "avatar.PNG"
   name             : "Yuming Yang"
   pronouns         : # example: "she/her"  
-  bio              : "Columbia Business School | PKU Mathematics & Economics| Crypto, Macro, Quant"
+  bio              : "Columbia Business School | Peking University| Crypto, Macro, Quant"
   location         : "Shanghai"
   employer         : # "Columbia Business School"
   uri              : # URL
@@ -77,6 +77,7 @@ author:
   linkedin         : "yumingyang0"
   mastodon         : # URL
   medium           : "https://medium.com/@alanyang0"
+  substack         : "https://alanyang0.substack.com"
   pinterest        : # Username
   soundcloud       : # Username
   spotify          : # Username or URL for podcast

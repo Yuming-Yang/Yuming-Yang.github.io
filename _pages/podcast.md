@@ -12,7 +12,7 @@ Welcome to my podcast where I explore the intersection of finance, technology, a
 ## Latest Episodes
 
 {% for post in site.podcast %}
-  {% include archive-single.html type="grid" %}
+  {% include archive-single.html type="list" %}
 {% endfor %}
 
 ## Listen on Your Platform

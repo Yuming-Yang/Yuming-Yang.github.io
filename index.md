@@ -6,9 +6,7 @@ author_profile: true
 
 {% include base_path %}
 
-<div class="home-intro stack" style="padding: 3rem 0; border-radius: 16px; background:
-  radial-gradient(600px 200px at 10% -20%, rgba(0,0,0,.05), rgba(0,0,0,0)),
-  radial-gradient(600px 200px at 90% -20%, rgba(0,0,0,.04), rgba(0,0,0,0));">
+<div class="home-intro stack" style="padding: 3rem 0;">
   <h2>Welcome</h2>
   <p>
     <a class="btn btn--primary" href="/blog/">Read the Blog</a>
@@ -18,7 +16,7 @@ author_profile: true
     {% if site.platforms.substack_url %}<a class="btn btn--primary" href="{{ site.platforms.substack_url }}" target="_blank" rel="noopener">Substack</a>{% endif %}
     {% if site.platforms.spotify_url %}<a class="btn btn--primary" href="{{ site.platforms.spotify_url }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
   </p>
-  <hr />
+  
 </div>
 
 <div class="home-section stack">

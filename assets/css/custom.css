@@ -106,3 +106,31 @@ input, textarea, select { border-color: rgba(0,0,0,.12) !important; }
 
 /* Optional: reduce any remaining generic shadows */
 *:where(.shadow, .box-shadow) { box-shadow: none !important; }
+
+/* Home intro: ensure no visual divider under heading */
+.home-intro h2 { border-bottom: 0 !important; }
+
+/* Author profile: remove card feel */
+.author__avatar img { box-shadow: none !important; border: 0 !important; background: transparent !important; }
+.author__content, .author__urls-wrapper, .author__urls { background: transparent !important; box-shadow: none !important; border: 0 !important; }
+.author__urls { padding-left: 0; }
+
+/* Sidebar/TOC: flatten and lighten */
+.sidebar, .sidebar__right, .toc { background: transparent !important; box-shadow: none !important; border: 0 !important; }
+.toc .nav__title { border-bottom: 1px solid rgba(0,0,0,.06) !important; }
+[data-theme='dark'] .toc .nav__title { border-bottom-color: rgba(255,255,255,.09) !important; }
+
+/* Share/related sections: no block borders */
+.page__share, .page__related { background: transparent !important; box-shadow: none !important; border: 0 !important; }
+.page__related { border-top: 1px solid rgba(0,0,0,.06) !important; }
+[data-theme='dark'] .page__related { border-top-color: rgba(255,255,255,.09) !important; }
+
+/* Footer custom area: subtle only */
+.page__footer-custom { background: transparent !important; box-shadow: none !important; border-top: 1px solid rgba(0,0,0,.06) !important; }
+[data-theme='dark'] .page__footer-custom { border-top-color: rgba(255,255,255,.09) !important; }
+
+/* Spacing rhythm: consistent section spacing */
+.stack > * + * { margin-top: 0.75rem; }
+.home-section { margin: 2rem 0; }
+.page__content h2 { margin-top: 2rem; }
+.page__content h3 { margin-top: 1.25rem; }

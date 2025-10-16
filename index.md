@@ -4,7 +4,7 @@ title: "Yuming Yang"
 header:
   overlay_color: "#000"
   overlay_filter: "0.35"
-  overlay_image: "/images/homepage.jpg"
+  overlay_image: "/images/homepage.png"
 excerpt: "Financial Economics • Crypto • Macro • Quant"
 intro:
   - excerpt: "Building systematic, data-driven insights across digital assets and macro markets."

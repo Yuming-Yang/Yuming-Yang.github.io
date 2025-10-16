@@ -72,6 +72,16 @@
   }
 }
 
+/* Fix dropdown menu for dark mode */
+.greedy-nav .hidden-links {
+  background: var(--global-bg-color) !important;
+  border-color: var(--global-border-color) !important;
+}
+[data-theme='dark'] .greedy-nav .hidden-links {
+  background: var(--global-card-bg) !important;
+  border-color: var(--global-border-color) !important;
+}
+
 /* CTA - flat */
 .cta-bar { padding: .9rem 0; border-radius: 0; background: transparent; border-bottom: 1px solid var(--global-border-color); margin: 1rem 0 1.5rem; }
 [data-theme='dark'] .cta-bar { background: transparent; border-color: #262626; }

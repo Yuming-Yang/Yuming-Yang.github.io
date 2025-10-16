@@ -57,6 +57,7 @@ function updateNav() {
       $btn.addClass('hidden');
       $btn.removeClass('close');
       $hlinks.addClass('hidden');
+      $hlinks.prop('hidden', true);
     }
   }
 
@@ -76,6 +77,7 @@ screen.orientation.addEventListener("change", function(){
 
 $btn.on('click', function() {
   $hlinks.toggleClass('hidden');
+  $hlinks.prop('hidden', !$hlinks.prop('hidden'));
   $(this).toggleClass('close');
 });
 

@@ -1,0 +1,79 @@
+/* ==========================================================================
+   MODERN THEME (light + dark via [data-theme])
+   ========================================================================== */
+
+/* Base palette */
+$gray                       : #6b7280;  // slate-500
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+$lighter-gray               : mix(#fff, $gray, 90%);
+
+/* Accent palette */
+$primary                    : #6366f1;  // indigo-500
+$primary-dark               : mix(#000, $primary, 20%);
+$primary-light              : mix(#fff, $primary, 15%);
+
+/* Semantic */
+$danger-color               : #ef4444;  // red-500
+$info-color                 : #0ea5e9;  // sky-500
+$notice-color               : #f59e0b;  // amber-500
+$success-color              : #22c55e;  // green-500
+$warning-color              : #f59e0b;  // amber-500
+
+/* UI tokens */
+$border-radius              : 10px;
+$box-shadow                 : 0 10px 30px rgba(2, 6, 23, 0.08);
+$global-transition          : all 0.25s ease;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 260px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Light theme */
+:root {
+  --global-base-color: #{$gray};
+  --global-bg-color: #f8fafc; /* slate-50 */
+  --global-card-bg: #ffffff;
+  --global-border-color: #e5e7eb; /* gray-200 */
+  --global-code-background-color: #f3f4f6; /* gray-100 */
+  --global-code-text-color: #111827; /* gray-900 */
+  --global-fig-caption-color: #6b7280;
+  --global-link-color: #{$primary};
+  --global-link-color-hover: #{$primary-dark};
+  --global-link-color-visited: #{$primary-light};
+  --global-masthead-link-color: #0f172a; /* slate-900 */
+  --global-masthead-link-color-hover: #334155; /* slate-700 */
+  --global-text-color: #0f172a; /* slate-900 */
+  --global-text-color-light: #475569; /* slate-600 */
+  --global-thead-color: #f1f5f9; /* slate-100 */
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --global-base-color: #a1a1aa; /* zinc-400 */
+  --global-bg-color: #0b1220; /* slate-950 */
+  --global-card-bg: #0f172a; /* slate-900 */
+  --global-border-color: #1f2937; /* gray-800 */
+  --global-code-background-color: #111827; /* gray-900 */
+  --global-code-text-color: #e5e7eb; /* gray-200 */
+  --global-fig-caption-color: #94a3b8; /* slate-400 */
+  --global-link-color: #{$primary-light};
+  --global-link-color-hover: #{$primary};
+  --global-link-color-visited: #{$primary};
+  --global-masthead-link-color: #e5e7eb;
+  --global-masthead-link-color-hover: #cbd5e1;
+  --global-text-color: #e5e7eb;
+  --global-text-color-light: #94a3b8;
+  --global-thead-color: #0b1220;
+}
+
+/* Subtle card styling hook (consumed by layout partials via vars) */
+.page, .archive, .page__content, .sidebar, .page__hero, .site-footer {
+  background: var(--global-card-bg);
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+}
+
+

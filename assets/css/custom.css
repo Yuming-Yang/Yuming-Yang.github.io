@@ -58,3 +58,51 @@
 
 /* Ensure reveal elements are visible on load to avoid transparency issues */
 .will-reveal { opacity: 1 !important; transform: none !important; }
+
+/* Cards and separators — soften visibility across OS, especially Windows */
+/* Flatten primary containers to avoid nested card feel */
+.page, .page__content, .archive, .sidebar, .page__hero, .site-footer, .card {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Archive items: lighten separators further */
+.archive__item { border-bottom: 1px solid rgba(0,0,0,.06) !important; }
+[data-theme='dark'] .archive__item { border-bottom-color: rgba(255,255,255,.09) !important; }
+.archive__subtitle { border-bottom: 1px solid rgba(0,0,0,.06) !important; }
+[data-theme='dark'] .archive__subtitle { border-bottom-color: rgba(255,255,255,.09) !important; }
+
+/* Remove image hover shadows that exaggerate depth */
+.archive__item:hover .archive__item-teaser,
+.page__content a:hover img { box-shadow: none !important; }
+
+/* Page heading underline: make subtle */
+.page__content h2 { border-bottom: 1px solid rgba(0,0,0,.08) !important; }
+[data-theme='dark'] .page__content h2 { border-bottom-color: rgba(255,255,255,.12) !important; }
+
+/* Horizontal rule: hairline */
+hr { border-top: 1px solid rgba(0,0,0,.08) !important; }
+[data-theme='dark'] hr { border-top-color: rgba(255,255,255,.12) !important; }
+
+/* Tables: soften row dividers */
+th, td { border-bottom: 1px solid rgba(0,0,0,.06) !important; }
+[data-theme='dark'] th, [data-theme='dark'] td { border-bottom-color: rgba(255,255,255,.09) !important; }
+
+/* Code blocks: remove heavy border/shadow if any */
+.highlight, pre, code { box-shadow: none !important; }
+
+/* Masthead: remove harsh border and heavy shadow */
+.masthead { border-bottom: 1px solid transparent !important; box-shadow: none; }
+.masthead.is-scrolled { box-shadow: 0 4px 10px rgba(0,0,0,.04); }
+[data-theme='dark'] .masthead.is-scrolled { box-shadow: 0 4px 10px rgba(0,0,0,.10); }
+
+/* Inputs/buttons: keep borders but lighten to reduce chrome heaviness */
+button, .btn, input[type="submit"], input[type="button"], .button,
+input, textarea, select { border-color: rgba(0,0,0,.12) !important; }
+[data-theme='dark'] button, [data-theme='dark'] .btn, [data-theme='dark'] input[type="submit"],
+[data-theme='dark'] input[type="button"], [data-theme='dark'] .button,
+[data-theme='dark'] input, [data-theme='dark'] textarea, [data-theme='dark'] select { border-color: rgba(255,255,255,.18) !important; }
+
+/* Optional: reduce any remaining generic shadows */
+*:where(.shadow, .box-shadow) { box-shadow: none !important; }

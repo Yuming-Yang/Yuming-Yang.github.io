@@ -1,9 +1,10 @@
 ---
 layout: single
-title: "Contact"
-permalink: /contact/
+title: "Connect"
+permalink: /connect/
 author_profile: true
 redirect_from:
+  - /contact/
   - /contact.html
 ---
 

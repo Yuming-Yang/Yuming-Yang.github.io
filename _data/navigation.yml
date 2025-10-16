@@ -5,11 +5,11 @@
 # prevent it from being included in the site.
 
 main:
+  - title: "Home"
+    url: /
   - title: "Blog"
     url: /year-archive/
   - title: "Podcast"
     url: /podcast/
-  - title: "About"
-    url: /about/
-  - title: "Contact"
-    url: /contact/
+  - title: "Connect"
+    url: /connect/

@@ -3,25 +3,28 @@
 [data-theme='dark'] { --yy-accent: #f5f5f5; }
 
 /* Buttons */
-.btn, button, a.btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; padding: .6rem 1rem; font-weight: 500; text-decoration: none; border: 1px solid transparent; border-radius: var(--yy-radius); transition: color .16s cubic-bezier(.2,.8,.2,1), background-color .16s cubic-bezier(.2,.8,.2,1), box-shadow .16s cubic-bezier(.2,.8,.2,1), transform .12s ease; }
-.btn, a.btn { color: var(--global-text-color); text-decoration: none; }
-.btn--primary { 
-  background-color: rgba(17,17,17,.12);
-  border-color: rgba(17,17,17,.24);
-  color: var(--global-text-color);
-  backdrop-filter: saturate(110%) blur(4px);
-  box-shadow: 0 1px 0 rgba(0,0,0,.05) inset, 0 6px 20px rgba(0,0,0,.06);
-}
-.btn--primary:hover { background-color: rgba(17,17,17,.16); border-color: rgba(17,17,17,.32); }
+.btn, button, a.btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; padding: .6rem 1rem; font-weight: 500; text-decoration: none; border: 1px solid var(--global-border-color); border-radius: var(--yy-radius); transition: color .16s cubic-bezier(.2,.8,.2,1), background-color .16s cubic-bezier(.2,.8,.2,1), box-shadow .16s cubic-bezier(.2,.8,.2,1), transform .12s ease; }
+.btn, a.btn { color: var(--global-text-color); text-decoration: none; background: transparent; }
+.btn--primary, .btn--secondary { backdrop-filter: blur(8px) saturate(140%); -webkit-backdrop-filter: blur(8px) saturate(140%); }
+.btn--primary { background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.40)); border-color: rgba(0,0,0,.12); color: #0f0f0f; box-shadow: 0 1px 0 rgba(255,255,255,.45) inset, 0 8px 24px rgba(0,0,0,.06); }
+.btn--primary:hover { background: linear-gradient(180deg, rgba(255,255,255,.65), rgba(255,255,255,.48)); border-color: rgba(0,0,0,.18); }
 .btn { color: var(--global-text-color); border-radius: var(--yy-radius); }
-[data-theme='dark'] .btn--primary { background-color: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22); color: #eaeaea; }
-[data-theme='dark'] .btn--primary:hover { background-color: rgba(255,255,255,.14); border-color: rgba(255,255,255,.30); }
+[data-theme='dark'] .btn--primary { background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.08)); border-color: rgba(255,255,255,.20); color: #eaeaea; }
+[data-theme='dark'] .btn--primary:hover { background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.12)); border-color: rgba(255,255,255,.26); }
 
 /* Secondary button style (outline) */
-.btn--secondary { background: transparent; border-color: var(--global-border-color); color: color-mix(in oklab, var(--global-text-color), #fff 20%); }
-.btn--secondary:hover { background: rgba(0,0,0,.04); }
-[data-theme='dark'] .btn--secondary { color: color-mix(in oklab, var(--global-text-color), #000 15%); }
-[data-theme='dark'] .btn--secondary:hover { background: rgba(255,255,255,.06); }
+.btn--secondary { background: linear-gradient(180deg, rgba(255,255,255,.30), rgba(255,255,255,.18)); border-color: var(--global-border-color); color: var(--global-text-color); box-shadow: 0 1px 0 rgba(255,255,255,.35) inset, 0 4px 18px rgba(0,0,0,.04); }
+.btn--secondary:hover { background: linear-gradient(180deg, rgba(255,255,255,.38), rgba(255,255,255,.24)); }
+[data-theme='dark'] .btn--secondary { background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.06)); border-color: rgba(255,255,255,.16); color: #e5e5e5; }
+[data-theme='dark'] .btn--secondary:hover { background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.10)); }
+
+/* Normalize legacy dark buttons to neutral outline */
+.btn--inverse, .btn--dark, .btn--info, .btn--danger, .btn--success {
+  background: transparent !important;
+  color: var(--global-text-color) !important;
+  border-color: var(--global-border-color) !important;
+}
+.btn--primary:focus-visible, .btn--secondary:focus-visible { outline: 2px solid color-mix(in oklab, var(--global-text-color), #000 10%); outline-offset: 2px; }
 .btn--primary:hover { filter: brightness(1.05); box-shadow: 0 6px 18px rgba(0,0,0,.15); transform: translateY(-1px); }
 
 /* Cards */

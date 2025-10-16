@@ -13,10 +13,10 @@ author_profile: true
   <p>
     <a class="btn btn--primary" href="/blog/">Read the Blog</a>
     <a class="btn btn--primary" href="/podcast/">Listen to the Podcast</a>
-    <a class="btn" href="/about/">About Me</a>
-    <a class="btn" href="/connect/">Connect</a>
-    {% if site.platforms.substack_url %}<a class="btn" href="{{ site.platforms.substack_url }}" target="_blank" rel="noopener">Substack</a>{% endif %}
-    {% if site.platforms.spotify_url %}<a class="btn" href="{{ site.platforms.spotify_url }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
+    <a class="btn btn--primary" href="/about/">About Me</a>
+    <a class="btn btn--primary" href="/connect/">Connect</a>
+    {% if site.platforms.substack_url %}<a class="btn btn--primary" href="{{ site.platforms.substack_url }}" target="_blank" rel="noopener">Substack</a>{% endif %}
+    {% if site.platforms.spotify_url %}<a class="btn btn--primary" href="{{ site.platforms.spotify_url }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
   </p>
   <hr />
 </div>

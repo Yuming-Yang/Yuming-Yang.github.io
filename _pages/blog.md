@@ -11,8 +11,8 @@ redirect_from:
 <div class="cta-bar cluster">
   <strong>Subscribe or follow:</strong>
   {% if site.platforms.substack_url %}<a class="btn btn--primary" href="{{ site.platforms.substack_url }}" target="_blank" rel="noopener">Substack</a>{% endif %}
-  {% if site.platforms.medium_url %}<a class="btn" href="{{ site.platforms.medium_url }}" target="_blank" rel="noopener">Medium</a>{% endif %}
-  {% if site.external_feeds.blog_rss %}<a class="btn" href="{{ site.external_feeds.blog_rss }}" target="_blank" rel="noopener">RSS</a>{% endif %}
+  {% if site.platforms.medium_url %}<a class="btn btn--primary" href="{{ site.platforms.medium_url }}" target="_blank" rel="noopener">Medium</a>{% endif %}
+  {% if site.external_feeds.blog_rss %}<a class="btn btn--primary" href="{{ site.external_feeds.blog_rss }}" target="_blank" rel="noopener">RSS</a>{% endif %}
 </div>
 
 Welcome to my blog where I share insights on macro markets, crypto, credit, and quantitative finance.

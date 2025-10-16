@@ -10,9 +10,9 @@ redirect_from:
 <div class="cta-bar cluster">
   <strong>Listen on:</strong>
   {% if site.platforms.spotify_url %}<a class="btn btn--primary" href="{{ site.platforms.spotify_url }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
-  {% if site.platforms.apple_podcasts_url %}<a class="btn" href="{{ site.platforms.apple_podcasts_url }}" target="_blank" rel="noopener">Apple Podcasts</a>{% endif %}
-  {% if site.platforms.google_podcasts_url %}<a class="btn" href="{{ site.platforms.google_podcasts_url }}" target="_blank" rel="noopener">Google Podcasts</a>{% endif %}
-  {% if site.external_feeds.podcast_rss %}<a class="btn" href="{{ site.external_feeds.podcast_rss }}" target="_blank" rel="noopener">RSS</a>{% endif %}
+  {% if site.platforms.apple_podcasts_url %}<a class="btn btn--primary" href="{{ site.platforms.apple_podcasts_url }}" target="_blank" rel="noopener">Apple Podcasts</a>{% endif %}
+  {% if site.platforms.google_podcasts_url %}<a class="btn btn--primary" href="{{ site.platforms.google_podcasts_url }}" target="_blank" rel="noopener">Google Podcasts</a>{% endif %}
+  {% if site.external_feeds.podcast_rss %}<a class="btn btn--primary" href="{{ site.external_feeds.podcast_rss }}" target="_blank" rel="noopener">RSS</a>{% endif %}
 </div>
 
 Welcome to my podcast where I explore the intersection of finance, technology, and markets. Each episode features conversations with industry experts, deep dives into market trends, and insights on quantitative finance and digital assets.

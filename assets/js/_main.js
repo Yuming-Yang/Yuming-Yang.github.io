@@ -72,4 +72,15 @@ $(document).ready(function(){
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
+  // Sticky masthead shadow on scroll
+  var masthead = document.querySelector('.masthead');
+  if (masthead) {
+    function onScroll(){
+      if (window.scrollY > 4) masthead.classList.add('is-scrolled');
+      else masthead.classList.remove('is-scrolled');
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
 });

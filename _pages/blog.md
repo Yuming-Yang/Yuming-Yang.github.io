@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 permalink: /blog/
 title: "Blog"
 author_profile: true
@@ -7,6 +7,13 @@ redirect_from:
   - /year-archive/
   - /wordpress/blog-posts/
 ---
+
+<div class="cta-bar">
+  <strong>Subscribe or follow:</strong>
+  {% if site.platforms.substack_url %}<a class="btn btn--primary" href="{{ site.platforms.substack_url }}" target="_blank" rel="noopener">Substack</a>{% endif %}
+  {% if site.platforms.medium_url %}<a class="btn" href="{{ site.platforms.medium_url }}" target="_blank" rel="noopener">Medium</a>{% endif %}
+  {% if site.external_feeds.blog_rss %}<a class="btn" href="{{ site.external_feeds.blog_rss }}" target="_blank" rel="noopener">RSS</a>{% endif %}
+</div>
 
 Welcome to my blog where I share insights on macro markets, crypto, credit, and quantitative finance.
 

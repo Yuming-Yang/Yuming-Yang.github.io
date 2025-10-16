@@ -1,0 +1,29 @@
+/* Accent, cards, sticky masthead, CTA bar, subtle transitions */
+:root { --yy-accent: #2b6cb0; }
+[data-theme='dark'] { --yy-accent: #63b3ed; }
+
+a, .btn, button { transition: color .2s ease, background-color .2s ease, box-shadow .2s ease, transform .12s ease; }
+.btn--primary { background-color: var(--yy-accent); border-color: var(--yy-accent); }
+.btn--primary:hover { filter: brightness(1.05); box-shadow: 0 6px 18px rgba(0,0,0,.15); transform: translateY(-1px); }
+
+.archive__item { padding: 1rem 1.1rem; border-radius: 10px; border: 1px solid rgba(0,0,0,.06); background: rgba(255,255,255,.9); box-shadow: 0 2px 6px rgba(0,0,0,.05); transition: box-shadow .2s ease, transform .12s ease, background .2s ease; }
+[data-theme='dark'] .archive__item { background: rgba(20,20,20,.85); border-color: rgba(255,255,255,.06); }
+.archive__item:hover { box-shadow: 0 8px 22px rgba(0,0,0,.12); transform: translateY(-2px); }
+.archive__item .page__meta { opacity: .75; font-size: .9rem; }
+
+.home-section { margin: 2rem 0; }
+.home-intro .btn { margin-right: .5rem; margin-bottom: .5rem; }
+
+.masthead { position: sticky; top: 0; z-index: 1000; backdrop-filter: saturate(120%) blur(6px); background-color: rgba(255,255,255,.85); transition: background-color .2s ease, box-shadow .2s ease; }
+[data-theme='dark'] .masthead { background-color: rgba(15,15,15,.7); }
+.masthead.is-scrolled { box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+
+#theme-toggle { border: 1px solid rgba(0,0,0,.1); background: transparent; border-radius: 8px; padding: 6px 10px; cursor: pointer; }
+[data-theme='dark'] #theme-toggle { border-color: rgba(255,255,255,.15); }
+
+.cta-bar { padding: .75rem 1rem; border-radius: 10px; background: linear-gradient(135deg, rgba(43,108,176,.12), rgba(99,179,237,.12)); border: 1px solid rgba(0,0,0,.06); margin: 1rem 0 1.5rem; }
+[data-theme='dark'] .cta-bar { background: linear-gradient(135deg, rgba(43,108,176,.18), rgba(99,179,237,.12)); border-color: rgba(255,255,255,.06); }
+.cta-bar .btn { margin-right: .5rem; margin-bottom: .25rem; }
+
+img[loading="lazy"] { /* just in case */ }
+

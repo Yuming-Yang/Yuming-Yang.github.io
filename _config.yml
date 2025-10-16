@@ -37,7 +37,7 @@ external_feeds:
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "homepage1.jpeg"
+  avatar           : "avatar.PNG"
   name             : "Yuming Yang"
   pronouns         : # example: "she/her"  
   bio              : "MS Financial Economics at Columbia Business School 26' | PKU Mathematics & Economics 24' | Crypto, Macro, Credit, Quant"

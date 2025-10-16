@@ -17,6 +17,21 @@ url                      : https://yumingyang.com # the base hostname & protocol
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "Yuming-Yang/Yuming-Yang.github.io"
 
+# External platforms and feeds (fill in your real URLs)
+platforms:
+  substack_url           : # e.g., https://yourname.substack.com
+  medium_url             : # e.g., https://medium.com/@yourname
+  twitter_url            : https://twitter.com/Alanyang00
+  linkedin_url           : https://linkedin.com/in/yumingyang0
+  github_url             : https://github.com/Yuming-Yang
+  spotify_url            : # e.g., https://open.spotify.com/show/...
+  apple_podcasts_url     : # e.g., https://podcasts.apple.com/...
+  google_podcasts_url    : # e.g., https://podcasts.google.com/feed/...
+
+external_feeds:
+  blog_rss               : # e.g., https://yourname.substack.com/feed
+  podcast_rss            : # e.g., https://your-podcast-feed-url.xml
+
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html

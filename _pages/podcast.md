@@ -17,10 +17,10 @@ Welcome to my podcast where I explore the intersection of finance, technology, a
 
 ## Listen on Your Platform
 
-- [Spotify](https://open.spotify.com/show/your-podcast-id)
-- [Apple Podcasts](https://podcasts.apple.com/podcast/your-podcast-id)
-- [Google Podcasts](https://podcasts.google.com/feed/your-feed-url)
-- [RSS Feed]({{ site.url }}/feed.xml)
+- {% if site.platforms.spotify_url %}[Spotify]({{ site.platforms.spotify_url }}){% else %}Spotify{% endif %}
+- {% if site.platforms.apple_podcasts_url %}[Apple Podcasts]({{ site.platforms.apple_podcasts_url }}){% else %}Apple Podcasts{% endif %}
+- {% if site.platforms.google_podcasts_url %}[Google Podcasts]({{ site.platforms.google_podcasts_url }}){% else %}Google Podcasts{% endif %}
+- {% if site.external_feeds.podcast_rss %}[RSS Feed]({{ site.external_feeds.podcast_rss }}){% else %}RSS Feed{% endif %}
 
 ## Topics Covered
 
@@ -30,3 +30,8 @@ Welcome to my podcast where I explore the intersection of finance, technology, a
 - **Market Insights**: Interviews with industry professionals and thought leaders
 
 *New episodes released weekly. Subscribe to stay updated on the latest insights.*
+
+{% if site.external_feeds.podcast_rss %}
+## From My Podcast Feed
+<div class="rss-list" data-rss="{{ site.external_feeds.podcast_rss }}" data-limit="8"></div>
+{% endif %}

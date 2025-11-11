@@ -19,8 +19,3 @@ Welcome to my podcast where I explore observations on the financial market, cryp
 {% for post in site.podcast %}
   {% include archive-single.html type="list" %}
 {% endfor %}
-
-## Listen on Your Platform
-
-- {% if site.platforms.spotify_url %}[Spotify]({{ site.platforms.spotify_url }}){% else %}Spotify{% endif %}
-

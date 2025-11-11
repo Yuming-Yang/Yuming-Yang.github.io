@@ -8,8 +8,6 @@ read_time: true
 date: 2025-11-11
 ---
 
-## Part 1: Welcome to the $115 Billion Puzzle Box
-
 Here’s a fun game for your next corporate finance seminar: ask the room what the primary goal of a corporate treasury is. You’ll get a chorus of "capital preservation" and "liquidity management." The stuff that ensures you can make payroll and keep the lights on, basically.
 
 Then, ask them to explain a public company whose primary treasury strategy is to voluntarily convert its cash into one of the most famously volatile assets in human history, finance that purchase with convertible debt, and then watch its stock trade at a durable 80-100% premium to the value of those assets.

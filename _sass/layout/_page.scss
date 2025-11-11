@@ -3,33 +3,40 @@
    ========================================================================== */
 
 #main {
-  @include container;
-  @include clearfix;
   margin-top: 2em;
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
   animation-delay: 0.35s;
 
-  @include breakpoint($x-large) {
-    max-width: $x-large;
+  /* Container width is handled by .container class in theme */
+  @media (min-width: 1280px) {
+    max-width: 1280px;
   }
 }
 
 .page {
-  @include breakpoint($large) {
-    @include span(9 of 12 last);
-    @include prefix(1 of 12);
-    @include suffix(2 of 12);
+  width: 100%;
+  min-width: 0; /* Prevents grid item overflow */
+
+  /* On mobile/tablet: full width */
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
+
+  /* On desktop: works within CSS Grid, takes remaining space (1fr) */
+  @media (min-width: 1024px) {
+    width: 100%;
+    min-width: 0;
   }
 
   .page__inner-wrap {
-    @include full();
+    width: 100%;
 
     .page__content,
     .page__meta,
     .page__share {
-      @include full();
+      width: 100%;
     }
   }
 }
@@ -110,7 +117,6 @@
 .page__hero {
   position: relative;
   margin-bottom: 2em;
-  @include clearfix;
   animation: intro 0.3s both;
   animation-delay: 0.25s;
 
@@ -118,7 +124,6 @@
     position: relative;
     margin-bottom: 2em;
     padding: 3em 0;
-    @include clearfix;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -129,12 +134,12 @@
       color: #fff;
     }
 
-    .wrapper {
+      .wrapper {
       padding-left: 1em;
       padding-right: 1em;
 
-      @include breakpoint($x-large) {
-        max-width: $x-large;
+      @media (min-width: 1280px) {
+        max-width: 1280px;
       }
     }
 
@@ -153,7 +158,7 @@
     .page__title {
       font-size: $type-size-2;
 
-      @include breakpoint($small) {
+      @media (min-width: 600px) {
         font-size: $type-size-1;
       }
     }
@@ -181,7 +186,7 @@
   opacity: 0.5;
   border-radius: $border-radius 0 $border-radius 0;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     padding: 5px 10px;
   }
 
@@ -200,7 +205,7 @@
   padding-top: 1em;
   border-top: 1px solid var(--global-border-color);
 
-  @include breakpoint(max-width $small) {
+  @media (max-width: 599px) {
     .btn span {
       border: 0;
       clip: rect(0 0 0 0);
@@ -282,7 +287,7 @@
    ========================================================================== */
 
 .page__comments {
-  @include full();
+  width: 100%;
 }
 
 .page__comments-title {
@@ -314,7 +319,6 @@
 }
 
 .comment {
-  @include clearfix();
   margin: 1em 0;
 
   &:not(:last-child) {
@@ -327,7 +331,7 @@
   width: 60px;
   height: 60px;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     width: 100px;
     height: 100px;
   }
@@ -338,7 +342,7 @@
   height: 40px;
   border-radius: 50%;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     width: 80px;
     height: 80px;
     padding: 5px;
@@ -350,7 +354,7 @@
   float: right;
   width: calc(100% - 60px);
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     width: calc(100% - 100px);
   }
 }
@@ -381,11 +385,11 @@
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px solid var(--global-border-color);
-  @include clearfix();
-  float: left;
+  width: 100%;
 
-  @include breakpoint($large) {
-    @include pre(2.5 of 12);
+  @media (min-width: 925px) {
+    /* On desktop with sidebar, content is already in grid, no need for pre */
+    width: 100%;
   }
 
   a {

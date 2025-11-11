@@ -10,18 +10,20 @@
   -webkit-transform: translate3d(0, 0 , 0);
           transform: translate3d(0, 0 , 0);
 
-  @include clearfix();
   margin-bottom: 1em;
+  width: 100%;
+  max-width: 100%;
 
-  @media screen and (min-width: $sidebar-screen-min-width) {
-    height: 100vh;
-    overflow-y: auto;               // Add scrollbar if the sidebar is too long
-    position: fixed;
-    padding-top: $masthead-height;
+  /* Mobile and tablet: stack above content, full width */
+  @media (max-width: 1023px) {
+    margin-bottom: 2em;
   }
 
-  @include breakpoint($large) {
-    @include span(3 of 12);
+  /* Desktop: works within CSS Grid layout */
+  @media (min-width: 1024px) {
+    max-width: 240px;
+    width: 100%;
+    margin-bottom: 0;
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-in-out;
             transition: opacity 0.2s ease-in-out;
@@ -29,11 +31,6 @@
     &:hover {
       opacity: 1;
     }
-  }
-
-  @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
-    padding-right: 0;
   }
 
   h2, h3, h4, h5, h6 {
@@ -59,15 +56,15 @@
 .sidebar__right {
   margin-bottom: 1em;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     position: relative;
     float: right;
     width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
+    margin-left: 1rem;
     z-index: 10;
   }
 
-  @include breakpoint($x-large) {
+  @media (min-width: 1280px) {
     width: $right-sidebar-width;
   }
 }
@@ -83,7 +80,7 @@
   // set width only, for non-square avatars
   // height: 36px;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     display: block;
     width: auto;
     height: auto;
@@ -93,7 +90,7 @@
     max-width: 175px;
     border-radius: 50%;
 
-    @include breakpoint($large) {
+    @media (min-width: 925px) {
       padding: 5px;
       border: 1px solid var(--global-border-color);
     }
@@ -107,7 +104,7 @@
   padding-right: 25px;
   line-height: 1;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     display: block;
     width: 100%;
     padding-left: 0;
@@ -118,7 +115,7 @@
 .author__name {
   margin: 0;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -138,7 +135,7 @@
 .author__pronouns {
   margin: 0;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -147,7 +144,7 @@
 .author__bio {
   margin: 0;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -168,14 +165,14 @@
     }
   }
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     display: block;
   }
 
   button {
     margin-bottom: 0;
 
-    @include breakpoint($large) {
+    @media (min-width: 925px) {
       display: none;
     }
   }
@@ -195,7 +192,7 @@
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
 
-  @include breakpoint($large) {
+  @media (min-width: 925px) {
     display: block;
     position: relative;
     margin: 0;
@@ -217,7 +214,7 @@
     border-color: var(--global-border-color) transparent;
     z-index: 0;
 
-    @include breakpoint($large) {
+    @media (min-width: 925px) {
       display: none;
     }
   }
@@ -234,7 +231,7 @@
     border-color: #fff transparent;
     z-index: 1;
 
-    @include breakpoint($large) {
+    @media (min-width: 925px) {
       display: none;
     }
   }

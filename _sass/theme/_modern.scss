@@ -177,21 +177,79 @@ th, td { padding: .75rem 1rem; border-bottom: 1px solid var(--global-border-colo
   right: 0;
 }
 
-/* Two-column layout override for pages with sidebar */
+/* Two-column layout for pages with sidebar using CSS Grid */
+/* Desktop: Two-column grid layout */
 @media (min-width: 1024px) {
+  /* Always use two-column grid - pages without sidebar will span both columns */
   #main.container {
     display: grid;
-    grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
-    gap: clamp(1.25rem, 2vw, 2rem);
+    grid-template-columns: minmax(200px, 240px) minmax(0, 1fr);
+    gap: clamp(1.5rem, 3vw, 3rem);
     align-items: start;
   }
-  #main .sidebar { position: sticky; top: calc(var(--masthead-h) + 16px); float: none; width: auto; }
-  #main.container > .sidebar { grid-column: 1; }
-  #main.container > .page { grid-column: 2; min-width: 0; }
+  
+  /* Archive and pages without sidebar span full width */
+  #main.container > .archive,
+  #main.container > .page:only-child,
+  #main.container > article:only-child {
+    grid-column: 1 / -1;
+  }
+  
+  /* Sidebar positioning */
+  #main.container > .sidebar {
+    position: sticky;
+    top: calc(var(--masthead-h) + 16px);
+    float: none;
+    width: 100%;
+    max-width: 240px;
+    height: fit-content;
+    max-height: calc(100vh - var(--masthead-h) - 32px);
+    overflow-y: auto;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  /* Page/article when sidebar exists (sidebar comes before page in HTML) */
+  #main.container > .sidebar ~ .page,
+  #main.container > .sidebar ~ article {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    width: 100%;
+  }
+  
+  /* Ensure archive always spans full width */
+  #main.container > .archive {
+    grid-column: 1 / -1;
+  }
 }
 
-/* Stack on smaller viewports */
-@media (max-width: 1023.98px) {
-  #main.container { display: block; }
+/* Tablet viewport: consider stacking or compact sidebar */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #main.container {
+    display: block;
+  }
+  
+  .sidebar {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Mobile viewport: single column, stack layout */
+@media (max-width: 767px) {
+  #main.container {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .sidebar {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  .page {
+    width: 100%;
+  }
 }
 

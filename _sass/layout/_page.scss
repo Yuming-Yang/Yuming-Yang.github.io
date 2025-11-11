@@ -19,9 +19,14 @@
   width: 100%;
   min-width: 0; /* Prevents grid item overflow */
 
-  /* On mobile/tablet: full width */
+  /* On mobile/tablet: full width, reset grid properties */
   @media (max-width: 1023px) {
-    width: 100%;
+    width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    float: none !important;
   }
 
   /* On desktop: works within CSS Grid, takes remaining space (1fr) */

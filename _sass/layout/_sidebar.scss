@@ -16,7 +16,17 @@
 
   /* Mobile and tablet: stack above content, full width */
   @media (max-width: 1023px) {
+    position: relative !important;
+    top: auto !important;
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin-bottom: 2em;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
   }
 
   /* Desktop: works within CSS Grid layout */

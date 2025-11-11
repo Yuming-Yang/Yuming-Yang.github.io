@@ -224,32 +224,86 @@ th, td { padding: .75rem 1rem; border-bottom: 1px solid var(--global-border-colo
   }
 }
 
-/* Tablet viewport: consider stacking or compact sidebar */
+/* Tablet viewport: block layout with stacked sidebar */
 @media (min-width: 768px) and (max-width: 1023px) {
   #main.container {
-    display: block;
+    display: block !important;
+    grid-template-columns: none !important;
   }
   
-  .sidebar {
+  /* Reset sidebar positioning for block layout */
+  #main.container > .sidebar {
+    position: relative !important;
+    top: auto !important;
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin-bottom: 2rem;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+  
+  /* Ensure page content is properly stacked */
+  #main.container > .page,
+  #main.container > article {
+    width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    float: none !important;
+  }
+  
+  /* Archive pages should also be full width */
+  #main.container > .archive {
+    width: 100% !important;
+    grid-column: auto !important;
   }
 }
 
 /* Mobile viewport: single column, stack layout */
 @media (max-width: 767px) {
   #main.container {
-    display: block;
+    display: block !important;
+    grid-template-columns: none !important;
     padding-left: 1rem;
     padding-right: 1rem;
   }
   
-  .sidebar {
+  /* Reset sidebar for mobile */
+  #main.container > .sidebar {
+    position: relative !important;
+    top: auto !important;
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin-bottom: 2rem;
-    width: 100%;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: visible !important;
   }
   
-  .page {
-    width: 100%;
+  /* Reset page for mobile */
+  #main.container > .page,
+  #main.container > article {
+    width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    float: none !important;
+  }
+  
+  /* Archive pages */
+  #main.container > .archive {
+    width: 100% !important;
+    grid-column: auto !important;
   }
 }
 

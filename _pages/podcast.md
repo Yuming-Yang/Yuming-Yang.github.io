@@ -10,9 +10,6 @@ redirect_from:
 <div class="cta-bar cluster">
   <strong>Listen on:</strong>
   {% if site.platforms.spotify_url %}<a class="btn btn--primary" href="{{ site.platforms.spotify_url }}" target="_blank" rel="noopener">Spotify</a>{% endif %}
-  {% if site.platforms.apple_podcasts_url %}<a class="btn btn--primary" href="{{ site.platforms.apple_podcasts_url }}" target="_blank" rel="noopener">Apple Podcasts</a>{% endif %}
-  {% if site.platforms.google_podcasts_url %}<a class="btn btn--primary" href="{{ site.platforms.google_podcasts_url }}" target="_blank" rel="noopener">Google Podcasts</a>{% endif %}
-  {% if site.external_feeds.podcast_rss %}<a class="btn btn--primary" href="{{ site.external_feeds.podcast_rss }}" target="_blank" rel="noopener">RSS</a>{% endif %}
 </div>
 
 Welcome to my podcast where I explore the intersection of finance, technology, and markets. Each episode features conversations with industry experts, deep dives into market trends, and insights on quantitative finance and digital assets.
@@ -26,9 +23,6 @@ Welcome to my podcast where I explore the intersection of finance, technology, a
 ## Listen on Your Platform
 
 - {% if site.platforms.spotify_url %}[Spotify]({{ site.platforms.spotify_url }}){% else %}Spotify{% endif %}
-- {% if site.platforms.apple_podcasts_url %}[Apple Podcasts]({{ site.platforms.apple_podcasts_url }}){% else %}Apple Podcasts{% endif %}
-- {% if site.platforms.google_podcasts_url %}[Google Podcasts]({{ site.platforms.google_podcasts_url }}){% else %}Google Podcasts{% endif %}
-- {% if site.external_feeds.podcast_rss %}[RSS Feed]({{ site.external_feeds.podcast_rss }}){% else %}RSS Feed{% endif %}
 
 ## Topics Covered
 
@@ -39,7 +33,3 @@ Welcome to my podcast where I explore the intersection of finance, technology, a
 
 *New episodes released weekly. Subscribe to stay updated on the latest insights.*
 
-{% if site.external_feeds.podcast_rss %}
-## From My Podcast Feed
-<div class="rss-list" data-rss="{{ site.external_feeds.podcast_rss }}" data-limit="8"></div>
-{% endif %}

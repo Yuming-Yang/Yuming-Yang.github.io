@@ -18,8 +18,8 @@ I’m a finance professional with a strong quantitative foundation and a passion
 ## Content & Media
 
 I regularly share insights through:
-- **Blog posts** on market observations
-- **Podcast conversations** with industry experts and thought leaders
+- **Blog posts**
+- **Podcast conversations**
 
 ## Education
 

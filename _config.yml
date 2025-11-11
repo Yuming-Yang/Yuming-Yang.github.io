@@ -20,17 +20,17 @@ repository               : "Yuming-Yang/Yuming-Yang.github.io"
 # External platforms and feeds (fill in your real URLs)
 platforms:
   substack_url           : https://alanyang0.substack.com
-  medium_url             : https://medium.com/@alanyang0
+  medium_url             : 
   twitter_url            : https://twitter.com/Alanyang00
   linkedin_url           : https://linkedin.com/in/yumingyang0
   github_url             : https://github.com/Yuming-Yang
-  spotify_url            : # e.g., https://open.spotify.com/show/...
+  spotify_url            : https://open.spotify.com/show/6TDS5fvxERSlGCapP7hsdp
   apple_podcasts_url     : # e.g., https://podcasts.apple.com/...
   google_podcasts_url    : # e.g., https://podcasts.google.com/feed/...
 
 external_feeds:
-  blog_rss               : https://alanyang0.substack.com/feed
-  podcast_rss            : # e.g., https://your-podcast-feed-url.xml
+  blog_rss               : 
+  podcast_rss            : 
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -76,11 +76,11 @@ author:
   lastfm           : # Username
   linkedin         : "yumingyang0"
   mastodon         : # URL
-  medium           : "https://medium.com/@alanyang0"
+  medium           : 
   substack         : "https://alanyang0.substack.com"
   pinterest        : # Username
   soundcloud       : # Username
-  spotify          : # Username or URL for podcast
+  spotify          : "6TDS5fvxERSlGCapP7hsdp"
   steam            : # Username
   telegram         : # Username
   tumblr           : # Username

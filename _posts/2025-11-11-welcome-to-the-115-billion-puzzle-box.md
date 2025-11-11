@@ -5,6 +5,7 @@ excerpt: "Why are 200+ public companies trading at 2x the value of the crypto th
 categories: blog
 tags: [crypto]
 read_time: true
+date: 2025-11-11
 ---
 
 ## Part 1: Welcome to the $115 Billion Puzzle Box
@@ -66,3 +67,4 @@ This is the central paradox of DATs. The bull case rests on a few pillars of fri
 This leads us to the core thesis of this series: the premium isn't just about friction. It's about **ability**. The market is paying a premium for a management team's perceived *ability* to acquire, secure, manage, and deploy digital assets better than the investor could themselves.
 
 In **Part 2**, we'll build a rigorous valuation framework to answer the question: "What is a DATCO *really* worth?"
+
